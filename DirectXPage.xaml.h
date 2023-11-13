@@ -6,7 +6,7 @@
 #pragma once
 
 #include "DirectXPage.g.h"
-
+#include "pch.h"
 #include "Common\DeviceResources.h"
 #include "ChessRPGMain.h"
 
@@ -20,9 +20,10 @@ namespace ChessRPG
 	public:
 		DirectXPage();
 		virtual ~DirectXPage();
-
+		void OnKeyDown(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::KeyEventArgs^ args);
 		void SaveInternalState(Windows::Foundation::Collections::IPropertySet^ state);
 		void LoadInternalState(Windows::Foundation::Collections::IPropertySet^ state);
+		
 
 	private:
 		// Niskopoziomowa procedura obsługi zdarzeń renderowania XAML.

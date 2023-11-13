@@ -2,6 +2,9 @@
 
 #include "pch.h"
 #include "MainMenu.xaml.h"
+#include "Singleplayerpage.xaml.h"
+#include "Multipage.xaml.h"
+#include "Settingspage.xaml.h"
 
 using namespace ChessRPG;
 
@@ -10,14 +13,23 @@ MainMenu::MainMenu()
 	InitializeComponent();
 }
 
-void MainMenu::NewGame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+
+void MainMenu::Singleplayer_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	// Obsługa zdarzenia po kliknięciu przycisku "Nowa gra".
-	// Możesz dodać tutaj kod, który ma zostać wykonany po kliknięciu przycisku "Nowa gra".
+    Frame->Navigate(Singleplayerpage::typeid);
 }
 
-void MainMenu::LoadGame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void MainMenu::Multiplayer_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	// Obsługa zdarzenia po kliknięciu przycisku "Wczytaj grę".
-	// Możesz dodać tutaj kod, który ma zostać wykonany po kliknięciu przycisku "Wczytaj grę".
+	Frame->Navigate(Multipage::typeid);
 }
+
+void MainMenu::Ustawienia_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	Frame->Navigate(Settingspage::typeid);
+}
+void MainMenu::Exit_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
+

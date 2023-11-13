@@ -29,6 +29,7 @@ DirectXPage::DirectXPage():
 	m_coreInput(nullptr)
 {
 	InitializeComponent();
+	Window::Current->CoreWindow->KeyDown += ref new Windows::Foundation::TypedEventHandler<Windows::UI::Core::CoreWindow^, Windows::UI::Core::KeyEventArgs^>(this, &DirectXPage::OnKeyDown);
 
 	// Zarejestruj procedury obsługi zdarzeń cyklu życia strony.
 	CoreWindow^ window = Window::Current->CoreWindow;
@@ -82,6 +83,7 @@ DirectXPage::DirectXPage():
 
 	m_main = std::unique_ptr<ChessRPGMain>(new ChessRPGMain(m_deviceResources));
 	m_main->StartRenderLoop();
+
 }
 
 DirectXPage::~DirectXPage()
@@ -193,4 +195,24 @@ void DirectXPage::OnSwapChainPanelSizeChanged(Object^ sender, SizeChangedEventAr
 	critical_section::scoped_lock lock(m_main->GetCriticalSection());
 	m_deviceResources->SetLogicalSize(e->NewSize);
 	m_main->CreateWindowSizeDependentResources();
+}
+
+void DirectXPage::OnKeyDown(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::KeyEventArgs^ args)
+{
+	if (args->VirtualKey == Windows::System::VirtualKey::Escape)
+	{
+		// For debugging, check if this point is reached
+		OutputDebugString(L"Escape key pressed\n");
+
+		auto dispatcher = Windows::UI::Core::CoreWindow::GetForCurrentThread()->Dispatcher;
+
+		// Run the closing operation on the UI thread
+		dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal, ref new Windows::UI::Core::DispatchedHandler(
+			[this]()
+			{
+				OutputDebugString(L"Closing application\n");
+				Windows::UI::Xaml::Window::Current->Close();
+			}
+		));
+	}
 }

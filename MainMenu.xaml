@@ -6,14 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    >
 
-    <Grid>
-        <StackPanel VerticalAlignment="Center" Height="686">
-            <Button Content="SinglePlayer" Click="NewGame_Click" Height="100" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Content="MultiPlayer" Click="LoadGame_Click" Height="100" Width="200" HorizontalAlignment="Center"/>
-            <Button Content="Ustawienia" Click="LoadGame_Click" Height="100" Width="200" HorizontalAlignment="Center"/>
-            <Button Content="Wyjdź" Click="LoadGame_Click" Height="100" Width="200" HorizontalAlignment="Center"/>
+    <Page.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="Assets/Background.jpg" />
+    </Page.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}" BorderThickness="5" BorderBrush="White">
+        <StackPanel VerticalAlignment="Center">
+            <Button Content="SinglePlayer" Click="Singleplayer_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="MultiPlayer" Click="Multiplayer_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Ustawienia" Click="Ustawienia_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Wyjdź" Click="Exit_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
             <!-- Dodaj inne przyciski i elementy menu -->
         </StackPanel>
     </Grid>

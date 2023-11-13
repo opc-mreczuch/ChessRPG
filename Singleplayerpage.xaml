@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ChessRPG.Singleplayerpage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChessRPG"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="Assets/Background.jpg" />
+    </Page.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}" BorderThickness="5" BorderBrush="White">
+        <StackPanel VerticalAlignment="Center" >
+            <Button Content="Nowa Gra" Click="Newgame_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Wczytaj" Click="Loadgame_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Powrót do Menu" Click="Menu_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <!-- Dodaj inne przyciski i elementy menu -->
+        </StackPanel>
+    </Grid>
+</Page>

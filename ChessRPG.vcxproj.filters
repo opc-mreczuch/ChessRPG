@@ -78,6 +78,15 @@
     <Image Include="Assets\StoreLogo.png">
       <Filter>Zasoby</Filter>
     </Image>
+    <Image Include="Assets\Background.jpg">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Stagebackground.jpg">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\chessboard.jpg">
+      <Filter>Zasoby</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -85,5 +94,11 @@
   <ItemGroup>
     <Page Include="DirectXPage.xaml" />
     <Page Include="MainMenu.xaml" />
+    <Page Include="Multipage.xaml" />
+    <Page Include="Settingspage.xaml" />
+    <Page Include="Singleplayerpage.xaml" />
+    <Page Include="Newgame.xaml" />
+    <Page Include="LoadGame.xaml" />
+    <Page Include="Stage.xaml" />
   </ItemGroup>
 </Project>

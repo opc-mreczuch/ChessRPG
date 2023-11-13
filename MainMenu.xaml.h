@@ -11,7 +11,10 @@ namespace ChessRPG
 	{
 	public:
 		MainMenu();
-		void NewGame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		void LoadGame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Singleplayer_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Multiplayer_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Ustawienia_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Exit_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+
 	};
 }

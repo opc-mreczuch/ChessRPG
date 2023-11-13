@@ -31,6 +31,7 @@ using namespace Windows::UI::Xaml::Navigation;
 App::App()
 {
 	InitializeComponent();
+
 	Suspending += ref new SuspendingEventHandler(this, &App::OnSuspending);
 	Resuming += ref new EventHandler<Object^>(this, &App::OnResuming);
 }
@@ -94,6 +95,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 /// </summary>
 /// <param name="sender">Źródło żądania wstrzymania.</param>
 /// <param name="e">Szczegóły żądania wstrzymania.</param>
+
 void App::OnSuspending(Object^ sender, SuspendingEventArgs^ e)
 {
 	(void) sender;	// Nieużywany parametr
@@ -101,6 +103,7 @@ void App::OnSuspending(Object^ sender, SuspendingEventArgs^ e)
 
 	m_directXPage->SaveInternalState(ApplicationData::Current->LocalSettings->Values);
 }
+
 
 /// <summary>
 /// Wywoływane, gdy wykonanie aplikacji jest wznawiane.
@@ -125,3 +128,22 @@ void App::OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Naviga
 	throw ref new FailureException("Failed to load Page " + e->SourcePageType.Name);
 }
 
+void App::OnKeyDown(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::KeyEventArgs^ args)
+{
+	if (args->VirtualKey == Windows::System::VirtualKey::Escape)
+	{
+		// For debugging, check if this point is reached
+		OutputDebugString(L"Escape key pressed\n");
+
+		auto dispatcher = Windows::UI::Core::CoreWindow::GetForCurrentThread()->Dispatcher;
+
+		// Run the closing operation on the UI thread
+		dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal, ref new Windows::UI::Core::DispatchedHandler(
+			[this]()
+			{
+				OutputDebugString(L"Closing application\n");
+				Windows::UI::Xaml::Window::Current->Close();
+			}
+		));
+	}
+}

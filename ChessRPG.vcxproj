@@ -241,11 +241,14 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Image Include="Assets\Background.jpg" />
+    <Image Include="Assets\chessboard.jpg" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\Stagebackground.jpg" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
@@ -263,10 +266,28 @@
     <ClInclude Include="Content\Sample3DSceneRenderer.h" />
     <ClInclude Include="Content\SampleFpsTextRenderer.h" />
     <ClInclude Include="Content\ShaderStructures.h" />
+    <ClInclude Include="LoadGame.xaml.h">
+      <DependentUpon>LoadGame.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="MainMenu.xaml.h">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="Multipage.xaml.h">
+      <DependentUpon>Multipage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Newgame.xaml.h">
+      <DependentUpon>Newgame.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Settingspage.xaml.h">
+      <DependentUpon>Settingspage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Singleplayerpage.xaml.h">
+      <DependentUpon>Singleplayerpage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Stage.xaml.h">
+      <DependentUpon>Stage.xaml</DependentUpon>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.xaml.cpp">
@@ -279,8 +300,17 @@
     </ClCompile>
     <ClCompile Include="Content\SampleFpsTextRenderer.cpp" />
     <ClCompile Include="Content\Sample3DSceneRenderer.cpp" />
+    <ClCompile Include="LoadGame.xaml.cpp">
+      <DependentUpon>LoadGame.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="MainMenu.xaml.cpp">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Multipage.xaml.cpp">
+      <DependentUpon>Multipage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Newgame.xaml.cpp">
+      <DependentUpon>Newgame.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -291,6 +321,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Settingspage.xaml.cpp">
+      <DependentUpon>Settingspage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Singleplayerpage.xaml.cpp">
+      <DependentUpon>Singleplayerpage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Stage.xaml.cpp">
+      <DependentUpon>Stage.xaml</DependentUpon>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -313,9 +352,32 @@
     <Page Include="DirectXPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="LoadGame.xaml">
+      <SubType>Designer</SubType>
+      <DeploymentContent>true</DeploymentContent>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <DeploymentContent>true</DeploymentContent>
+    </Page>
+    <Page Include="Multipage.xaml">
+      <SubType>Designer</SubType>
+      <DeploymentContent>true</DeploymentContent>
+    </Page>
+    <Page Include="Newgame.xaml">
+      <SubType>Designer</SubType>
+      <DeploymentContent>true</DeploymentContent>
+    </Page>
+    <Page Include="Settingspage.xaml">
+      <SubType>Designer</SubType>
+      <DeploymentContent>true</DeploymentContent>
+    </Page>
+    <Page Include="Singleplayerpage.xaml">
+      <SubType>Designer</SubType>
+      <DeploymentContent>true</DeploymentContent>
+    </Page>
+    <Page Include="Stage.xaml">
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
