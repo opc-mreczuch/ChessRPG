@@ -70,6 +70,7 @@
   <ItemGroup>
     <ClInclude Include="ChessRPGMain.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Piece.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Square44x44Logo.scale-200.png">

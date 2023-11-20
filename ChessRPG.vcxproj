@@ -279,6 +279,9 @@
       <DependentUpon>Newgame.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Piece.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
     <ClInclude Include="Settingspage.xaml.h">
       <DependentUpon>Settingspage.xaml</DependentUpon>
     </ClInclude>

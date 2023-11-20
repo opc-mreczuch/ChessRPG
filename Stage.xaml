@@ -8,11 +8,137 @@
     mc:Ignorable="d">
 
     <Page.Resources>
+        <!-- Styl dla przycisków -->
+        <Style x:Key="ChessButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="100" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Margin" Value="0,0,5,5" />
+            <!-- Dodaj inne ustawienia stylu przycisków -->
+        </Style>
+
+        <!-- Styl dla TextBlock -->
+        <Style x:Key="ChessTextStyle" TargetType="TextBlock">
+            <!-- Ustawienia dla TextBlock -->
+        </Style>
+
         <SolidColorBrush x:Key="RedBackground" Color="#FFEF6161" />
         <ImageBrush x:Key="BackgroundBrush" ImageSource="Assets/chessboard.jpg"/>
     </Page.Resources>
 
-    <Grid Background="{StaticResource RedBackground}" BorderThickness="5" BorderBrush="White">
-        <Grid Width="1024" Height="1024" Background="{StaticResource BackgroundBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid Background="{StaticResource RedBackground}" BorderThickness="5" BorderBrush="White" x:Name="ChessGrid">
+        <StackPanel Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <!-- Plansza szachowa -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+
+                <!-- Pole tekstowe w lewym górnym rogu -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock x:Name="InfoCol" Style="{StaticResource ChessTextStyle}" Text="Tekst po wciśnięciu przycisku" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock x:Name="InfoRow" Style="{StaticResource ChessTextStyle}" Text="Tekst po wciśnięciu przycisku" />
+                </StackPanel>
+
+                <!-- Plansza z przyciskami -->
+                <StackPanel Orientation="Vertical" x:Name="ChessboardPanel">
+                    <!-- Pierwszy rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i1y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i1y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Drugi rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i2y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i2y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Trzeci rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i3y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i3y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Czwarty rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i4y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i4y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Piąty rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i5y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i5y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Szósty rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i6y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i6y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Siódmy rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i7y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i7y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+
+                    <!-- Ósmy rząd przycisków -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="i8y1" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y2" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y3" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y4" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y5" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y6" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y7" Style="{StaticResource ChessButtonStyle}" />
+                        <Button x:Name="i8y8" Style="{StaticResource ChessButtonStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

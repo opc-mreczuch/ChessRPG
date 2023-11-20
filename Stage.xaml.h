@@ -1,21 +1,22 @@
-﻿//
-// Stage.xaml.h
-// Deklaracja klasy Stage
-//
-
-#pragma once
+﻿#pragma once
 
 #include "Stage.g.h"
+#include <vector>
+#include <string>
 
 namespace ChessRPG
 {
-	/// <summary>
-	/// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-	/// </summary>
-	[Windows::Foundation::Metadata::WebHostHidden]
-	public ref class Stage sealed
-	{
-	public:
-		Stage();
-	};
+    public ref class Stage sealed
+    {
+    public:
+        Stage();
+
+    private:
+        void ChessButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void UpdateChessboardUI();
+
+        static std::vector<std::vector<std::wstring>> chessboard;
+        static std::vector<std::vector<Windows::UI::Xaml::Controls::Button^>> chessButtons;
+        std::pair<int, int> selectedButton;
+    };
 }
