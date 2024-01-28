@@ -44,21 +44,6 @@
     <FxCompile Include="Content\SampleVertexShader.hlsl">
       <Filter>Zawartość</Filter>
     </FxCompile>
-    <Image Include="Assets\LockScreenLogo.scale-200.png">
-      <Filter>Zasoby</Filter>
-    </Image>
-    <Image Include="Assets\SplashScreen.scale-200.png">
-      <Filter>Zasoby</Filter>
-    </Image>
-    <Image Include="Assets\Square150x150Logo.scale-200.png">
-      <Filter>Zasoby</Filter>
-    </Image>
-    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <Filter>Zasoby</Filter>
-    </Image>
-    <Image Include="Assets\Wide310x150Logo.scale-200.png">
-      <Filter>Zasoby</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -73,19 +58,82 @@
     <ClInclude Include="Piece.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\Square44x44Logo.scale-200.png">
-      <Filter>Zasoby</Filter>
-    </Image>
-    <Image Include="Assets\StoreLogo.png">
-      <Filter>Zasoby</Filter>
-    </Image>
     <Image Include="Assets\Background.jpg">
       <Filter>Zasoby</Filter>
     </Image>
     <Image Include="Assets\Stagebackground.jpg">
       <Filter>Zasoby</Filter>
     </Image>
-    <Image Include="Assets\chessboard.jpg">
+    <Image Include="Assets\BlackPawn.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhitePawn.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackBishop.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackKing.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackKnight.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackQueen.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackRook.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteBishop.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteKing.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteKnight.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteQueen.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteRook.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Background_Stage.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackShield.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteShield.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\BlackFire.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\WhiteFire.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Zasoby</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
       <Filter>Zasoby</Filter>
     </Image>
   </ItemGroup>
@@ -99,7 +147,11 @@
     <Page Include="Settingspage.xaml" />
     <Page Include="Singleplayerpage.xaml" />
     <Page Include="Newgame.xaml" />
-    <Page Include="LoadGame.xaml" />
     <Page Include="Stage.xaml" />
+    <Page Include="LoadGame.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ChessRPG_TemporaryKey.pfx" />
   </ItemGroup>
 </Project>

@@ -13,8 +13,8 @@
     
     <Grid Background="{StaticResource BackgroundBrush}" BorderThickness="5" BorderBrush="White">
         <StackPanel VerticalAlignment="Center">
-            <Button Content="Gra online" Click="Online_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="Gra lokalna" Click="Local_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <!-- <Button Content="Gra online" Click="Online_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Gra lokalna" Click="Local_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/> -->
             <Button Content="Powrót do menu" Click="Menu_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
             <!-- Dodaj inne przyciski i elementy menu -->
         </StackPanel>

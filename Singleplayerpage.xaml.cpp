@@ -8,6 +8,7 @@
 #include "MainMenu.xaml.h"
 #include "Newgame.xaml.h"
 #include "LoadGame.xaml.h"
+#include "Stage.xaml.h"
 
 using namespace ChessRPG;
 
@@ -31,7 +32,7 @@ Singleplayerpage::Singleplayerpage()
 
 void Singleplayerpage::Newgame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	Frame->Navigate(Newgame::typeid);
+	Frame->Navigate(Stage::typeid);
 }
 void Singleplayerpage::Loadgame_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {

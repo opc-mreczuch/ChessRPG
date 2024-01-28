@@ -9,13 +9,24 @@
 
     <Page.Resources>
         <ImageBrush x:Key="BackgroundBrush" ImageSource="Assets/Background.jpg" />
+
+        <!-- Styl dla przycisków na stronie Singleplayerpage -->
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="150" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="Background" Value="#F5F5F5" />
+            <Setter Property="Foreground" Value="#333333" />
+        </Style>
     </Page.Resources>
 
     <Grid Background="{StaticResource BackgroundBrush}" BorderThickness="5" BorderBrush="White">
-        <StackPanel VerticalAlignment="Center" >
-            <Button Content="Nowa Gra" Click="Newgame_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="Wczytaj" Click="Loadgame_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="Powrót do Menu" Click="Menu_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+        <StackPanel VerticalAlignment="Center">
+            <Button Content="Gracz vs Gracz" Click="Newgame_Click" Style="{StaticResource ActionButtonStyle}" />
+            <!--<Button Content="Wczytaj" Click="Loadgame_Click" Style="{StaticResource ActionButtonStyle}" />-->
+            <Button Content="Powrót do Menu" Click="Menu_Click" Style="{StaticResource ActionButtonStyle}" />
             <!-- Dodaj inne przyciski i elementy menu -->
         </StackPanel>
     </Grid>

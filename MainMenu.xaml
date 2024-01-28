@@ -5,19 +5,29 @@
     xmlns:local="using:ChessRPG"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    >
+    mc:Ignorable="d">
 
     <Page.Resources>
         <ImageBrush x:Key="BackgroundBrush" ImageSource="Assets/Background.jpg" />
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="150" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="#E0E0E0" />
+            <!-- Kolor obramowania, np. jasnoszary -->
+            <Setter Property="Background" Value="LightGray" />
+            <!-- Kolor tła, np. bardzo jasny szary -->
+            <Setter Property="Foreground" Value="#333333" />
+            <!-- Kolor tekstu, np. ciemnoszary -->
+        </Style>
     </Page.Resources>
 
     <Grid Background="{StaticResource BackgroundBrush}" BorderThickness="5" BorderBrush="White">
         <StackPanel VerticalAlignment="Center">
-            <Button Content="SinglePlayer" Click="Singleplayer_Click" Height="150" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="MultiPlayer" Click="Multiplayer_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="Ustawienia" Click="Ustawienia_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
-            <Button Content="Wyjdź" Click="Exit_Click" Height="150" Width="400" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White"/>
+            <Button Content="Gra Lokalna" Click="Singleplayer_Click" Style="{StaticResource ButtonStyle}" />
+            <Button Content="Gra Online" Click="Multiplayer_Click" Style="{StaticResource ButtonStyle}" />
+            <Button Content="Wyjdź" Click="Exit_Click" Style="{StaticResource ButtonStyle}" />
             <!-- Dodaj inne przyciski i elementy menu -->
         </StackPanel>
     </Grid>
